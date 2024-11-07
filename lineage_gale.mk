@@ -24,5 +24,32 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="vnd_gale-user 12 SP1A.210812.016 V816.0.2.0.UGPMIXM release-keys"
+    RISING_MAINTAINER="winbo.yml"
+
+    PRODUCT_BUILD_PROP_OVERRIDES += \
+        RisingChipset="MT6768" \
+        RisingMaintainer="winbo.yml"
+
+    RISING_PACKAGE_TYPE := "PIXEL"
+
+    TARGET_ENABLE_BLUR := false
+
+    TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := false  
+
+    WITH_GMS := true
+
+    PRODUCT_PACKAGES += \
+        Photos \
+        MarkupGoogle \
+        LatinIMEGooglePrebuilt \
+        AiWallpapers \
+        WallpaperEmojiPrebuilt \
+        PrebuiltDeskClockGoogle \
+        CalculatorGooglePrebuilt \
+        CalendarGooglePrebuilt \
+        Velvet
+    TARGET_CORE_GMS_EXTRAS := true
+
+    TARGET_DEFAULT_PIXEL_LAUNCHER := false
 
 BUILD_FINGERPRINT := alps/vnd_gale/gale:12/SP1A.210812.016/V816.0.2.0.UGPMIXM:user/release-keys
